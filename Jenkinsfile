@@ -1,6 +1,7 @@
 import groovy.json.JsonOutput
 import hudson.util.Secret
 pipeline{
+	agent any
 	stages {
 		stage('Build Config') {
 			steps{
