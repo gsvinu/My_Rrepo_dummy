@@ -1,5 +1,5 @@
 import groovy.json.JsonOutput
-#!/usr/bin/env groovy
+import groovy
 import hudson.util.Secret
 pipeline{
 	agent any
