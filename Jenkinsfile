@@ -1,15 +1,25 @@
 import groovy.json.JsonOutput
-pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                sh 'echo "Hello World"'
-                sh '''
-                    echo "Multiline shell steps works too"
-                    ls -lah
-                '''
-            }
-        }
-    }
-}
+import hudson.util.Secret
+pipeline{
+	agent any
+	stages {
+		stage('Build Config') {
+			steps{
+				script {
+					sh """
+						echo "Build stage"
+					"""
+				}
+			}
+		}
+		stage('Git Checkout') {
+			steps {
+				script {
+					sh """
+						echo "git stage"
+					"""
+				}
+			}
+		}
+	}
+}	
