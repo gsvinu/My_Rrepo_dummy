@@ -2,8 +2,8 @@ import groovy.json.JsonOutput
 import hudson.util.Secret
 pipeline{
 	parameters{
-		string(First_Name: 'Vinod')
-		string(Second_Name: 'Kumar')
+		string(First_Name: 'Vinod', description: 'github')
+		string(Second_Name: 'Kumar', description: 'github')
 	}
 	stages {
 		stage('Build Config') {
