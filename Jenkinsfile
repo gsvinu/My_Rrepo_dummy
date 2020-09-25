@@ -7,7 +7,7 @@ pipeline{
 			steps{
 				echo "build stage"
 				def props = readProperties file:'config/app.properties'
-				echo ${props['First_Name']}
+				echo "${props['First_Name']}"
 			}
 		}
 		stage('Git Checkout') {
