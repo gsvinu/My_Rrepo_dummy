@@ -4,6 +4,7 @@ pipeline{
 	parameters{
 		string(First_Name: 'Vinod')
 		string(Second_Name: 'Kumar')
+	}
 	stages {
 		stage('Build Config') {
 			steps{
