@@ -9,7 +9,6 @@ pipeline{
 		stage('Build Config') {
 			steps{
 				echo "build stage"
-				def props = readProperties file:'config/app.properties'
 				echo "${params.First_Name}"
 			}
 		}
