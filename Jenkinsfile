@@ -1,14 +1,15 @@
 import groovy.json.JsonOutput
-import groovy
 import hudson.util.Secret
 pipeline{
-	agent any
+	parameters{
+		string(First_Name: 'Vinod')
+		string(Second_Name: 'Kumar')
 	stages {
 		stage('Build Config') {
 			steps{
 				echo "build stage"
 				def props = readProperties file:'config/app.properties'
-				echo "${props['First_Name']}"
+				echo "${params.First_Name}"
 			}
 		}
 		stage('Git Checkout') {
