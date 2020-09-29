@@ -5,11 +5,8 @@ pipeline{
 	stages {
 		stage('Build Config') {
 			steps{
-				sh '''
 				echo "build stage"
-				pwd
-				'''
-				}
+			}
 		}
 		stage('Git Checkout') {
 			steps {
