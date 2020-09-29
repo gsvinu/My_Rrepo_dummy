@@ -5,11 +5,7 @@ pipeline{
 	stages {
 		stage('Build Config') {
 			steps{
-				script{
-					sh """
-						echo "build stage"
-					"""
-				}
+				echo "build stage"
 			}
 		}
 		stage('Git Checkout') {
