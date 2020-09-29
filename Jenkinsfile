@@ -6,6 +6,7 @@ pipeline{
 		stage('Build Config') {
 			steps{
 				echo "build stage"
+				pwd
 				}
 		}
 		stage('Git Checkout') {
